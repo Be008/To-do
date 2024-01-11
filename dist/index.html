@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="sweetalert2.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/bb14c45ef7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <link rel="stylesheet" href="output.css" />
+    <title>To-Do</title>
+  </head>
+
+  <body>
+    <main class="bg-ivory dark:bg-black h-screen">
+      <header class="h-1/6">
+        <div class="flex items-center justify-around w-screen h-full">
+          <div>
+            <div class="flex flex-row">
+              <h1
+                class="text-black dark:text-ivory font-bold text-base sm:text-lg md:text-2xl lg:text-2xl xl:text-2xl"
+              >
+                MAKE YOUR LIST
+              </h1>
+              <button class="pl-5 text-blue" onclick="openBox()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <div
+              class="text-black dark:text-ivory sm:text-lg md:text-md lg:text-lg xl:text-xl"
+              id="date"
+            ></div>
+          </div>
+          <div
+            class="text-black dark:text-ivory sm:text-lg md:text-xl lg:text-xl xl:text-xl hover:animate-pulse"
+          >
+            <i class="moon cursor-pointer fa-solid fa-moon"></i>
+            <i class="sun cursor-pointer fa-solid fa-sun"></i>
+          </div>
+        </div>
+      </header>
+
+      <section id="box" class="justify-center items-center relative h-4/6">
+        <div
+          class="flex flex-col items-center bg-gradient-to-br from-misty-blue to-pewter dark:bg-gradient-to-br dark:from-gray dark:to-ebony absolute h-96 w-4/5 md:w-2/5 lg:w-2/5 shadow-xl rounded-sm"
+        >
+          <div class="h-2/5 w-full text-end">
+            <button class="pr-3 pt-2" onclick="closeBox()">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <div class="h-3/5">
+            <input
+              class="p-2 focus:outline-none rounded-sm"
+              id="task"
+              type="text"
+              autocomplete="off"
+              maxlength="15"
+              placeholder="Add a task..."
+            />
+            <button
+              class="bg-blue dark:bg-gray text-ivory p-2 underline underline-offset-4 rounded-sm"
+              onclick="add()"
+            >
+              ADD
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <ul class="flex flex-col w-screen"></ul>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: #B9B7BD;
+}
+
+.display-none {
+    @apply hidden;
+}
+
+.display-flex {
+    @apply flex;
+}
+
+#box {
+    display: none;
+}
